@@ -29,7 +29,7 @@ fi
 alias ll='ls -FGlAhp'
 
 # Colorful List Files at current location
-alias ls='ls -Gp'
+alias ls='ls -aGp'
 
 # Lazy directory traverse
 # up a directory
@@ -50,18 +50,17 @@ alias gut='git'
 # git status
 alias gsts='git status'
 
-# git current branch
-alias gb='git rev-parse --abbrev-ref HEAD'
-
 # git checkout
 alias gswb='git checkout'
 
 # git new branch
 alias gnwb='git checkout -b'
 
+# git rebase
+alias grb='git rebase -i'
 
 # rm -r 'directory'
-function destroy {
+function rmf {
   rm -rf $1
 }
 
