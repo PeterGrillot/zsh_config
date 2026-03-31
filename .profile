@@ -25,9 +25,6 @@ fi
 # To temporarily bypass an alias
 # we can type '\whatever'
 
-# Verbose List Files at current location
-alias ll='ls -FGlAhp'
-
 # Colorful List Files at current location
 alias ls='ls -aGp'
 
@@ -44,6 +41,14 @@ alias home='cd ~'
 # Clear
 alias cl='clear'
 
+# rm -r 'directory'
+function rmf {
+  rm -rf $1
+}
+
+# -----------------------------------------
+#             All things Git
+# -----------------------------------------
 # Git! shitty spllling
 alias gut='git'
 
@@ -59,12 +64,6 @@ alias gnwb='git checkout -b'
 # git rebase
 alias grb='git rebase -i'
 
-# rm -r 'directory'
-function rmf {
-  rm -rf $1
-}
-
-# More Git
 # commit
 function gac {
   BRANCH=$(git rev-parse --abbrev-ref HEAD)
