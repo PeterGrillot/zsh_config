@@ -68,15 +68,21 @@ function rmf {
 # commit
 function gac {
   BRANCH=$(git rev-parse --abbrev-ref HEAD)
-  echo "You are in <${BRANCH}>, Message:"
-  read message
+  
+  if [ -n "$1" ]; then
+    message="$1"
+  else
+    echo "You are in <${BRANCH}>, Message:"
+    read message
+  fi
+
   git add -A && git commit -m "$message"
 }
 
 # update from branch
 function gmerge {
   BRANCH=$(git rev-parse --abbrev-ref HEAD)
-  echo "You are in <${BRANCH}>, Update from where?"
+  echo "You are in <${BRANCH}>, Merge from from which branch?"
   read message
   git merge --no-ff -m "Update from Develop" $message
 }
