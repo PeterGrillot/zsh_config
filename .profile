@@ -62,7 +62,7 @@ alias gswb='git checkout'
 alias gnwb='git checkout -b'
 
 # git rebase
-alias grb='git rebase -i'
+alias grbi='git rebase -i'
 
 # commit
 function gac {
